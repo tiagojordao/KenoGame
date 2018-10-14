@@ -1,11 +1,16 @@
 #ifndef KENOBET_H
 #define KENOBET_H
 
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <cstdlib>
+
 using number_type = unsigned short int; //<! data type for a keno hit.
 using cash_type = float; // <! Defines  the  wage  type in this  application.
 using set_of_numbers_type = std::vector< number_type >;
 
-Class KenoBet {
+class KenoBet {
 	public:
 		//! Creates  an empty  Keno  bet.
 		KenoBet( ) : m_wage (0)
