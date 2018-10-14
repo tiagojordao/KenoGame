@@ -1,3 +1,5 @@
+#include <iostream>
+
 #include "../include/kenobet.h"
 
 Kenobet::kenobet () {
@@ -36,9 +38,18 @@ size_t Kenobet::size (void) const {
 }
 
 set_of_numbers_type Kenobet::get_hits(const set_of_numbers_type & hits_ )const {
-	
+
+	set_of_numbers_type hit;
+
+	for (auto i(0u) ; i < sizeof(m_spots)){
+		for (auto j(0u); j < 20 ; ++j){
+			if (m_spots [i] == hits_[j]){
+				hit.push_back(m_spots[i]);
+			}
+		}
+	}
 }
 
 set_of_numbers_type  Kenobet::get_spots ( void ) const {
-
+	return m_spots;
 }
