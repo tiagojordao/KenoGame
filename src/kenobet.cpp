@@ -29,7 +29,7 @@ void KenoBet::reset ( void ){
 }
 
 size_t KenoBet::size (void) const {
-	return sizeof(m_spots);
+	return m_spots.size();
 }
 
 set_of_numbers_type KenoBet::get_hits(const set_of_numbers_type & hits_ )const {
